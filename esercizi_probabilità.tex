@@ -73,15 +73,6 @@
 
 \section{Problema 1}
 
-%\begin{align} 
-%\begin{split}
-%(x+y)^3 	&= (x+y)^2(x+y)\\
-%&=(x^2+2xy+y^2)(x+y)\\
-%&=(x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3)\\
-%&=x^3+3x^2y+3xy^2+y^3
-%\end{split}					
-%\end{align}
-
 \textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
 Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
 
@@ -107,18 +98,22 @@ P(X_{1} | X_{2}) = \frac{P(X_{2} | X_{1}) \cdot P(X_{1})}{P(X_{2})}
 \end{align}
 Per trovare $P(X_{2})$ dobbiamo utilizzare il teorema della probabilit\'a totale, impostandolo come segue:
 $$
-P(X_{2}) = P(X_2 | X_1) \cdot P(A) + P(X_2 | X_3) \cdot P(B) = \frac{4}{6} \cdot \frac{1}{2} + \frac{3}{6} \cdot \frac{1}{2} = \frac{7}{12}
+P(X_{2}) = P(X_2 | X_1) \cdot P(X_1) + P(X_2 | X_3) \cdot P(X_3) = \frac{4}{6} \cdot \frac{2}{4} + \frac{3}{6} \cdot \frac{2}{4} = \frac{7}{12}
 $$
+Stiamo descrivendo la probabilit\'a di estrarre una pallina bianca da B come la somma delle probabilit\'a di: estrarre una pallina bianca da B dato per certo che \'e stata passata da A a B una pallina bianca, per la probabilit\'a che ci\'o sia effettivamente avvenuto, pi\'u la probabilit\'a di estrarre una pallina bianca da B dato per certo che sia stata passata da A a B una pallina nera, per la probabilit\'a che ci\'o sia effettivamente avvenuto.\\
 Adesso sostituiamo nella formula e otteniamo:
 $$
-P(X_{1} | X_{2}) = \frac{\frac{4}{6} \cdot \frac{1}{2}}{\frac{7}{12}} = \frac{7}{12} = 0.5714
+P(X_{1} | X_{2}) = \frac{\frac{4}{6} \cdot \frac{2}{4}}{\frac{7}{12}} = \frac{7}{12} = 0.5714
 $$
 %------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 %	PROBLEM 2
 %----------------------------------------------------------------------------------------
+\section{Problema 2}
 
+\textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
+Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
 
 
 %----------------------------------------------------------------------------------------
