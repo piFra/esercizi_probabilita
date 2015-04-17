@@ -95,15 +95,23 @@ Prima del passaggio della pallina da A a B, le urne contenevano:\\
 Definiamo:
 \begin{align}
 X_{1} = passaggio\; di\; una\; pallina\; bianca\; da\; A\; a\; B\\
-X_{2} = estrazione\; di\; una\; pallina\; bianca\; da\; B
+X_{2} = estrazione\; di\; una\; pallina\; bianca\; da\; B\\
+X_{3} = passaggio\; di\; una\; pallina\; nera\; da\; A\; a\; B\\
+P(A) = probabilit\'a\; di\; estrarre\; una\; pallina\; da\; A\\
+P(B) = probabilit\'a\; di\; estrarre\; una\; pallina\; da\; B
 \end{align}
+So che $P(A)=P(B)=\frac{1}{2}$ poich\'e se ho 2 scatole la probabilit\'a di prendere una pallina da una delle due \'e $\frac{1}{2}$.\\
 Per risolvere il problema impostiamo l'equazione utilizzando il teorema di Bayes:
 \begin{align}
 P(X_{1} | X_{2}) = \frac{P(X_{2} | X_{1}) \cdot P(X_{1})}{P(X_{2})}
 \end{align}
 Per trovare $P(X_{2})$ dobbiamo utilizzare il teorema della probabilit\'a totale, impostandolo come segue:
 $$
-P(X_{2}) = 
+P(X_{2}) = P(X_2 | X_1) \cdot P(A) + P(X_2 | X_3) \cdot P(B) = \frac{4}{6} \cdot \frac{1}{2} + \frac{3}{6} \cdot \frac{1}{2} = \frac{7}{12}
+$$
+Adesso sostituiamo nella formula e otteniamo:
+$$
+P(X_{1} | X_{2}) = \frac{\frac{4}{6} \cdot \frac{1}{2}}{\frac{7}{12}} = \frac{7}{12} = 0.5714
 $$
 %------------------------------------------------
 
@@ -111,32 +119,7 @@ $$
 %	PROBLEM 2
 %----------------------------------------------------------------------------------------
 
-\section{Lists}
 
-%------------------------------------------------
-
-\subsection{Example of list (3*itemize)}
-\begin{itemize}
-	\item First item in a list 
-		\begin{itemize}
-		\item First item in a list 
-			\begin{itemize}
-			\item First item in a list 
-			\item Second item in a list 
-			\end{itemize}
-		\item Second item in a list 
-		\end{itemize}
-	\item Second item in a list 
-\end{itemize}
-
-%------------------------------------------------
-
-\subsection{Example of list (enumerate)}
-\begin{enumerate}
-\item First item in a list 
-\item Second item in a list 
-\item Third item in a list
-\end{enumerate}
 
 %----------------------------------------------------------------------------------------
 
