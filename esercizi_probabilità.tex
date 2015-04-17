@@ -71,14 +71,14 @@
 %	PROBLEM 1
 %----------------------------------------------------------------------------------------
 
-\section{Problema 1}
+\section*{Problema 1}
 
 \textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
 Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
 
 %------------------------------------------------
 
-\subsection{Soluzione}
+\subsection*{Soluzione}
 Per la risoluzione del problema \'e conviene utilizzare il teorema di Bayes, in quanto il quesito \'e una probabilit\'a condizionata.\\
 Prima del passaggio della pallina da A a B, le urne contenevano:\\
 \texttt{A: 2B 2N}\\
@@ -88,10 +88,10 @@ Definiamo:
 X_{1} = passaggio\; di\; una\; pallina\; bianca\; da\; A\; a\; B\\
 X_{2} = estrazione\; di\; una\; pallina\; bianca\; da\; B\\
 X_{3} = passaggio\; di\; una\; pallina\; nera\; da\; A\; a\; B\\
-P(A) = probabilit\'a\; di\; estrarre\; una\; pallina\; da\; A\\
-P(B) = probabilit\'a\; di\; estrarre\; una\; pallina\; da\; B
+P(X_1) = probabilit\'a\; di\; estrarre\; una\; bianca\; da\; A\\
+P(X_3) = probabilit\'a\; di\; estrarre\; una\; nera\; da\; A
 \end{align}
-So che $P(A)=P(B)=\frac{1}{2}$ poich\'e se ho 2 scatole la probabilit\'a di prendere una pallina da una delle due \'e $\frac{1}{2}$.\\
+So che $P(X_1)=P(X_3)=\frac{1}{2}$ poich\'e se ho 4 palline uguali a due a due, la probabilit\'a di prenderne una coppia uguale \'e $\frac{1}{2}$.\\
 Per risolvere il problema impostiamo l'equazione utilizzando il teorema di Bayes:
 \begin{align}
 P(X_{1} | X_{2}) = \frac{P(X_{2} | X_{1}) \cdot P(X_{1})}{P(X_{2})}
@@ -110,12 +110,21 @@ $$
 %----------------------------------------------------------------------------------------
 %	PROBLEM 2
 %----------------------------------------------------------------------------------------
-\section{Problema 2}
+\section*{Problema 2}
 
-\textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
-Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
+\textbf{Si considerino 10 urne, identiche in apparenza, di cui nove contengono due palline bianche e due nere e una contiene cinque palline bianche e una nera. Scelta un'urna a caso, si estrae una pallina che risulta essere bianca. Quale \'e la probabilit\'a che la pallina sia stata estratta dall'urna contenente 5 palline bianche?}
 
-
+\subsection*{Soluzione}
+Per risolvere questo problema \'e conveniente utilizzare il teorema di Bayes in quanto il quesito richiede una probabilit\'a condizionata.
+Definiamo:
+\begin{align}
+U_2 = Urna\; contenente\; 2\; palline\; bianche\\
+U_5 = Urna\; contenente\; 5\; palline\; bianche\\
+X_1 = estrazione\; di\; una\; pallina\; bianca\; da\; U_2\\
+X_2 = estrazione\; di\; una\; pallina\; bianca\; da\; U_5\\
+X_3 = estrazione\; di\; una\; pallina\; bianca
+\end{align}
+Il problma ci chiede di trovare la probabilit\'a condizionata: $P(X_2 | X_3)$
 %----------------------------------------------------------------------------------------
 
 \end{document}
