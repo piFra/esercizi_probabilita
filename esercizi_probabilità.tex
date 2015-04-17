@@ -122,19 +122,26 @@ U_2 = Urna\; contenente\; 2\; palline\; bianche\\
 U_5 = Urna\; contenente\; 5\; palline\; bianche\\
 X_1 = estrazione\; di\; una\; pallina\; bianca\; da\; U_2\\
 X_2 = estrazione\; di\; una\; pallina\; bianca\; da\; U_5\\
-X_3 = estrazione\; di\; una\; pallina\; bianca
+X_3 = estrazione\; di\; una\; pallina\; bianca\\
+P(X_1) = probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 2\\
+P(X_2) = probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 5
 \end{align}
 Il problma ci chiede di trovare la probabilit\'a condizionata: $P(X_2 | X_3)$ che con il teorema di Bayes possiamo esprimere come:
 $$
 P(X_2 | X_3) = \frac{P(X_3 | X_2) \cdot P(X_2)}{P(X_3)}
 $$
-dove per trovare $P(X_3)$ utilizziamo il teorema sulla probabilit\'a totale.
+dove per trovare $P(X_3)$ utilizziamo il teorema sulla probabilit\'a totale, sapendo che: $ P(X_1) = \frac{9}{10} \\ P(X_2) = \frac{1}{10}$
 $$
 P(X_3) = P(X_3 | X_1) \cdot P(X_1) + P(X_3 | X_2) \cdot P(X_2) 
 $$
-Stiamo esprimendo la probabilit\'a di estrarre una pallina bianca da tutte le urne come la somma delle probabilit\'a di: estrarre una pallina bianca dall'urna che ne contiene 2 per la probabilit\'a che ci\'o sia effettivamente avvenuto, pi\'u la probabilit\'a di estrarre una pallina bianca dall'urna che ne contiene 5 per la probabilit\'a che ci\'o sia effettivamente avvenuto.\\
+Stiamo esprimendo la probabilit\'a di estrarre una pallina bianca da tutte le urne come la somma delle probabilit\'a di: estrarre una pallina bianca dall'urna che ne contiene 2 per la probabilit\'a che abbia effettivamente estratto la pallina da un'urna di tipo 2, pi\'u la probabilit\'a di estrarre una pallina bianca dall'urna che ne contiene 5 per la probabilit\'a che che abbia effettivamente estratto la pallina da un'urna di tipo 5.\\
 Sostituendo otteniamo:
 $$
+P(X_3) = \frac{2}{4} \cdot \frac{9}{10} + \frac{5}{6} \cdot \frac{1}{10} = \frac{32}{60}
+$$
+Adesso utilizziamo la formula di Bayes con i valori ottenuti:
+$$
+P(X_2 | X_3) = \frac{\frac{5}{6} \cdot \frac{1}{10}}{\frac{32}{60}} = \frac{5}{32} = 0.1562
 $$
 %----------------------------------------------------------------------------------------
 
