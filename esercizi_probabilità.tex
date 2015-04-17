@@ -20,12 +20,11 @@
 
 \documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
 
-\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+%\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
 \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-\usepackage[english]{babel} % English language/hyphenation
+\usepackage[italian]{babel} % Italian language/hyphenation
+\usepackage[latin1]{inputenc} % For some italian specific letters(accents)
 \usepackage{amsmath,amsfonts,amsthm} % Math packages
-
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
 \usepackage{sectsty} % Allows customizing section commands
 \allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
@@ -54,13 +53,13 @@
 
 \title{	
 \normalfont \normalsize 
-\textsc{university, school or department name} \\ [25pt] % Your university, school and/or department name(s)
+\textsc{Universita' degli studi di Catania} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Assignment Title \\ % The assignment title
+\huge Esercizi calcolo probabilistico \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
-\author{John Smith} % Your name
+\author{Francesco Pistritto} % Your name
 
 \date{\normalsize\today} % Today's date or a custom date
 
@@ -72,44 +71,33 @@
 %	PROBLEM 1
 %----------------------------------------------------------------------------------------
 
-\section{Problem title}
+\section{Problema 1}
 
-\lipsum[2] % Dummy text
+%\begin{align} 
+%\begin{split}
+%(x+y)^3 	&= (x+y)^2(x+y)\\
+%&=(x^2+2xy+y^2)(x+y)\\
+%&=(x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3)\\
+%&=x^3+3x^2y+3xy^2+y^3
+%\end{split}					
+%\end{align}
 
-\begin{align} 
-\begin{split}
-(x+y)^3 	&= (x+y)^2(x+y)\\
-&=(x^2+2xy+y^2)(x+y)\\
-&=(x^3+2x^2y+xy^2) + (x^2y+2xy^2+y^3)\\
-&=x^3+3x^2y+3xy^2+y^3
-\end{split}					
-\end{align}
-
-Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies
+\textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
+Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
 
 %------------------------------------------------
 
-\subsection{Heading on level 2 (subsection)}
-
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+\subsection{Soluzione}
+Per la risoluzione del problema \'e conviene utilizzare il teorema di Bayes, in quanto il quesito \'e una probabilit\'a condizionata.\\
+Prima del passaggio della pallina da A a B, le urne contenevano:\\
+\texttt{A: 2B 2N}\\
+\texttt{B: 3B 2N}\\
+Definiamo:
 \begin{align}
-A = 
-\begin{bmatrix}
-A_{11} & A_{21} \\
-A_{21} & A_{22}
-\end{bmatrix}
+X_{1} = passaggio\; di\; una\; pallina\; bianca\; da\; A\; a\; B
 \end{align}
-Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
 
 %------------------------------------------------
-
-\subsubsection{Heading on level 3 (subsubsection)}
-
-\lipsum[3] % Dummy text
-
-\paragraph{Heading on level 4 (paragraph)}
-
-\lipsum[6] % Dummy text
 
 %----------------------------------------------------------------------------------------
 %	PROBLEM 2
