@@ -202,7 +202,7 @@ Supponendo poi che che il 25\% delle confezioni venga riempito con il macchinari
 \item[3] La probabilit\'a che, presa a caso una confezione di cioccolato fuso che contiene meno di 0.5lt di cioccolato fuso, questa sia stata riempita dal macchinario A.
 \end{enumerate}
 }
-\subsection*{Soluzione}
+\subsection{Soluzione}
 Il primo punto del problema si presta ad essere risolto utilizzando le formule della variabile normale standard, ed in particolare la funzione $\Phi(x)$. Definiamo:
 \begin{align}
 X &= quantit\'a\; di\; cioccolato\; per\; confezione\; se\; usiamo\; A\\
@@ -213,7 +213,12 @@ Il primo punto chiede di trovare: $P(X > 1) < 0.1$ da cui, effettuando la sostit
 $$
 1 - P(X \leq 1) < 0.1 \to P(X \leq 1) > 0.9
 $$
-Adesso calcoliamo $\lambda$ come
+Adesso calcoliamo $\lambda$ come $\lambda = \frac{1 - 0.5}{\sigma_A} = \frac{0.5}{\sigma_A}$. Notiamo che $\sigma_A$ \'e una quantit\'a positiva, in quanto \'e una radice ($\sigma_A = \sqrt{\sigma_A^2}$).\\ Dunque sapendo che $\lambda = \frac{0.5}{\sigma_A} > 0$, possiamo calcolare $\Phi(\lambda)$ come $\Phi(\lambda) = 0.5 + Tab(\lambda)$ ed imporre che $\Phi(\lambda) > 0.9$.\\
+Sostituendo a $\Phi(\lambda)$ il valore $0.5 + Tab(\lambda)$ otteniamo $0.5 + Tab(\lambda) > 0.9$ da cui $Tab(\lambda) \geq 0.4$.\\
+Andiamo a leggere in corrispondenza della tabella della $\Phi(x)$ quando troviamo un valore di $x$ che rende $\Phi(x) > 0.4$. Tale valore \'e circa $1.29$, da cui ricaviamo che $\frac{0.5}{\sigma_A \geq 1.29} \to \sigma_A \geq 0.384$.\\
+Scegliamo $\sigma_A = 0.384$ poich\'e \'e il pi\'u piccolo valore per cui quella disuguaglianza \'e verificata.\\
+\subsection{Soluzione}
+
 %----------------------------------------------------------------------------------------
 
 
