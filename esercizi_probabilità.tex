@@ -218,14 +218,24 @@ Sostituendo a $\Phi(\lambda)$ il valore $0.5 + Tab(\lambda)$ otteniamo $0.5 + Ta
 Andiamo a leggere in corrispondenza della tabella della $\Phi(x)$ quando troviamo un valore di $x$ che rende $\Phi(x) > 0.4$. Tale valore \'e circa $1.29$, da cui ricaviamo che $\frac{0.5}{\sigma_A} \geq 1.29 \to \sigma_A \geq 0.384$.\\
 Scegliamo $\sigma_A = 0.384$ poich\'e \'e il pi\'u piccolo valore per cui la disuguaglianza \'e verificata.\\
 \subsection{Soluzione}
-Per la soluzione del secondo problema definiamo ancora:
+Per la soluzione del secondo punto del problema definiamo ancora:
 \begin{align}
 P(A) = Probabilit\'a\; che\; una\; confezione\; sia\; riempita\; con\; A\\
 P(B) = Probabilit\'a\; che\; una\; confezione\; sia\; riempita\; con\; B\\
 \end{align}
 Sappiamo che $P(A) = 0.25$ e che $P(B) = 0.75$, quindi per calcolare $P(X < 0.5)$ possiamo usare il teorema della probabilit\'a totale come:
 $$
-
+P(X < 0.5) = P(X < 0.5 | B) \cdot P(B) + P(X < 0.5 | A) \cdot P(A)
+$$
+\textbf{\texttt{N.B.}} $P(X < 0.5 | A) = \frac{1}{2}$ poich\'e $\mu_A = \frac{1}{2}$, dunque, dato che l'area della curva vale 1, basta perndere met\'a della curva per avere un'area pari a $\frac{1}{2}$.
+Sostituiamo i valori e otteniamo:
+$$
+P(X < 0.5) = \frac{2}{10} \cdot \frac{3}{4} + \frac{1}{2} \cdot \frac{1}{4} = \frac{11}{40} = 0.2750
+$$
+\subsection{Soluzione}
+Possiamo adesso risolvere il terzo punto del problema utilizzando il teorema di Bayes come:
+$$
+P(A | X < 0.5) = \frac{P(X < 0.5 | A) \cdot P(A)}{P(X < 0.5)} = \frac{\frac{1}{2} \cdot \frac{1}{4}}{\frac{11}{40}} = \frac{5}{11} = 0.4545
 $$
 %----------------------------------------------------------------------------------------
 
