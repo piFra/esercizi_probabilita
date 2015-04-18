@@ -139,7 +139,7 @@ dove per trovare $P(X_3)$ utilizziamo il teorema sulla probabilit\'a totale, sap
 $$
 P(X_3) = P(X_3 | X_1) \cdot P(X_1) + P(X_3 | X_2) \cdot P(X_2) 
 $$
-Stiamo esprimendo la probabilit\'a di estrarre una pallina bianca da tutte le urne come la somma delle probabilit\'a di: estrarre una pallina bianca dall'urna che ne contiene 2 per la probabilit\'a che abbia effettivamente estratto la pallina da un'urna di tipo 2, pi\'u la probabilit\'a di estrarre una pallina bianca dall'urna che ne contiene 5 per la probabilit\'a che che abbia effettivamente estratto la pallina da un'urna di tipo 5.\\
+Stiamo esprimendo la probabilit\'a di estrarre una pallina bianca da tutte le urne come la somma delle probabilit\'a di: estrarre una pallina bianca dall'urna dato per certo che l'ho estratta da un'urna di tipo 2 per la probabilit\'a che abbia effettivamente estratto la pallina da un'urna di tipo 2, pi\'u la probabilit\'a di estrarre una pallina bianca dall'urna dato per certo che l'ho estratta da un'urna di tipo 5 per la probabilit\'a che abbia effettivamente estratto la pallina da un'urna di tipo 5\\
 Sostituendo otteniamo:
 $$
 P(X_3) = \frac{2}{4} \cdot \frac{9}{10} + \frac{5}{6} \cdot \frac{1}{10} = \frac{32}{60}
@@ -203,7 +203,17 @@ Supponendo poi che che il 25\% delle confezioni venga riempito con il macchinari
 \end{enumerate}
 }
 \subsection*{Soluzione}
-
+Il primo punto del problema si presta ad essere risolto utilizzando le formule della variabile normale standard, ed in particolare la funzione $\Phi(x)$. Definiamo:
+\begin{align}
+X &= quantit\'a\; di\; cioccolato\; per\; confezione\; se\; usiamo\; A\\
+\lambda &= \frac{X - \mu_A}{\sigma_A} \to variabile\; normalizzata\\
+P(X > 1) &= probabilit\'a\; che\; usando\; A\; si\; abbiano\; pi\'u\; di\; 1lt\; di\; cioccolato\;
+\end{align}
+Il primo punto chiede di trovare: $P(X > 1) < 0.1$ da cui, effettuando la sostituzione:\\ $P(X > 1) = 1 - P(X \leq 1)$ otteniamo 
+$$
+1 - P(X \leq 1) < 0.1 \to P(X \leq 1) > 0.9
+$$
+Adesso calcoliamo $\lambda$ come
 %----------------------------------------------------------------------------------------
 
 
