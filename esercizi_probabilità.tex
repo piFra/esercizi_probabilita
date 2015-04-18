@@ -24,7 +24,8 @@
 \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
 \usepackage[italian]{babel} % Italian language/hyphenation
 \usepackage[latin1]{inputenc} % For some italian specific letters(accents)
-\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[fleqn]{amsmath} % Math package
+\usepackage{amsfonts,amsthm} % Math packages
 
 \usepackage{sectsty} % Allows customizing section commands
 \allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
@@ -87,11 +88,11 @@ Prima del passaggio della pallina da A a B, le urne contenevano:\\
 \texttt{B: 3B 2N}\\
 Definiamo:
 \begin{align}
-X_{1} = passaggio\; di\; una\; pallina\; bianca\; da\; A\; a\; B\\
-X_{2} = estrazione\; di\; una\; pallina\; bianca\; da\; B\\
-X_{3} = passaggio\; di\; una\; pallina\; nera\; da\; A\; a\; B\\
-P(X_1) = probabilit\'a\; di\; estrarre\; una\; bianca\; da\; A\\
-P(X_3) = probabilit\'a\; di\; estrarre\; una\; nera\; da\; A
+X_{1} &= passaggio\; di\; una\; pallina\; bianca\; da\; A\; a\; B\\
+X_{2} &= estrazione\; di\; una\; pallina\; bianca\; da\; B\\
+X_{3} &= passaggio\; di\; una\; pallina\; nera\; da\; A\; a\; B\\
+P(X_1) &= probabilit\'a\; di\; estrarre\; una\; bianca\; da\; A\\
+P(X_3) &= probabilit\'a\; di\; estrarre\; una\; nera\; da\; A
 \end{align}
 So che $P(X_1)=P(X_3)=\frac{1}{2}$ poich\'e se ho 4 palline uguali a due a due, la probabilit\'a di prenderne una coppia uguale \'e $\frac{1}{2}$.\\
 Per risolvere il problema impostiamo l'equazione utilizzando il teorema di Bayes:
@@ -122,13 +123,13 @@ Si considerino 10 urne, identiche in apparenza, di cui nove contengono due palli
 Per risolvere questo problema \'e conveniente utilizzare il teorema di Bayes in quanto il quesito richiede una probabilit\'a condizionata.
 Definiamo:
 \begin{align}
-U_2 = Urna\; contenente\; 2\; palline\; bianche\\
-U_5 = Urna\; contenente\; 5\; palline\; bianche\\
-X_1 = estrazione\; di\; una\; pallina\; bianca\; da\; U_2\\
-X_2 = estrazione\; di\; una\; pallina\; bianca\; da\; U_5\\
-X_3 = estrazione\; di\; una\; pallina\; bianca\\
-P(X_1) = probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 2\\
-P(X_2) = probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 5
+U_2 &= Urna\; contenente\; 2\; palline\; bianche\\
+U_5 &= Urna\; contenente\; 5\; palline\; bianche\\
+X_1 &= estrazione\; di\; una\; pallina\; bianca\; da\; U_2\\
+X_2 &= estrazione\; di\; una\; pallina\; bianca\; da\; U_5\\
+X_3 &= estrazione\; di\; una\; pallina\; bianca\\
+P(X_1) &= probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 2\\
+P(X_2) &= probabilit\'a\; di\; scegliere\; un'urna\; di\; tipo\; 5
 \end{align}
 Il problma ci chiede di trovare la probabilit\'a condizionata: $P(X_2 | X_3)$ che con il teorema di Bayes possiamo esprimere come:
 $$
@@ -165,14 +166,24 @@ La probabilit\'a che un giocatore di basket faccia canestro al tiro libero \'e 0
 \subsection*{Soluzione}
 Il problema si presta ad essere risolto utilizzando la probabilit\'a definita secondo Bernoulli, attraverso l'utilizzo dei coefficienti binomiali $\binom{n}{k}$ dove \texttt{n} \'e il numero di tentativi e \texttt{k} il numero di successi desiderati. La formula completa da utilizzare \'e: $\binom{n}{k}p^{k}q^{n-k}$.\\
 Definiamo:
+\begin{align}
+X_1 &= probabilit\'a\; di\; ottenere\; 15\; successi\\
+X_2 &= probabilit\'a\; di\; ottenere\; 14\; successi\\
+n &= 15\\
+k_1 &= 15\\
+k_2 &= 14\\
+p &= 0.7\\
+q &= 1-p = 0.3
+\end{align}
+Dove $k_1$ \'e il numero di successi desiderati al primo punto del problema, mentre $k_2$ \'e il numero di successi desiderati al secondo punto del problema. \\
+Sostituendo i valori per risolvere il primo punto otteniamo:
 $$
-n = 15
-k_1 = 15
-k_2 = 14
-p = 0.7
-q = 1-p = 0.3
+P(X_1) = \binom{15}{15} \cdot 0.7^{15} \cdot 0.3^{0} = 0.0047
 $$
-Dove $k_1$ \'e il numero di successi desiderati al primo punto del problema, mentre $k_2$ \'e il numero di successi desiderati al secondo punto del problema. Sostituendo i valori per risolvere il primo punto otteniamo:
-
+Mentre se sostituiamo i valori per ottenere la soluzione del secondo problema otteniamo:
+$$
+P(X_2) = \binom{15}{14} \cdot 0.7^{14} \cdot 0.3^{1} = 0.0305
+$$
 %----------------------------------------------------------------------------------------
+
 \end{document}
