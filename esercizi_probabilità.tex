@@ -73,8 +73,10 @@
 
 \section*{Problema 1}
 
-\textbf{Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
-Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.}
+\textbf{
+Si considerino 2 urne, A e B. L'urna A contiene 2 palline bianche e 2 palline nere. L'urna B contiene 3 palline bianche e 2 nere. Si estrae una pallina da A e, senza vederla, la si inserisce dentro B. Successivamente si estrae da B, senza reinserimento, una pallina che risulta essere bianca. Si determini la probabilit\'a che la pallina trasferita da A a B sia stata bianca, sapendo che la pallina estratta da B \'e bianca.\\
+Inoltre si vuole estrarre un'ulteriore pallina da B. Si calcoli la probabilit\'a che tale pallina sia bianca.
+}
 
 %------------------------------------------------
 
@@ -112,7 +114,9 @@ $$
 %----------------------------------------------------------------------------------------
 \section*{Problema 2}
 
-\textbf{Si considerino 10 urne, identiche in apparenza, di cui nove contengono due palline bianche e due nere e una contiene cinque palline bianche e una nera. Scelta un'urna a caso, si estrae una pallina che risulta essere bianca. Quale \'e la probabilit\'a che la pallina sia stata estratta dall'urna contenente 5 palline bianche?}
+\textbf{
+Si considerino 10 urne, identiche in apparenza, di cui nove contengono due palline bianche e due nere e una contiene cinque palline bianche e una nera. Scelta un'urna a caso, si estrae una pallina che risulta essere bianca. Quale \'e la probabilit\'a che la pallina sia stata estratta dall'urna contenente 5 palline bianche?
+}
 
 \subsection*{Soluzione}
 Per risolvere questo problema \'e conveniente utilizzare il teorema di Bayes in quanto il quesito richiede una probabilit\'a condizionata.
@@ -145,4 +149,30 @@ P(X_2 | X_3) = \frac{\frac{5}{6} \cdot \frac{1}{10}}{\frac{32}{60}} = \frac{5}{3
 $$
 %----------------------------------------------------------------------------------------
 
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+\section*{Problema 3}
+
+\textbf{
+La probabilit\'a che un giocatore di basket faccia canestro al tiro libero \'e 0.7. Assumendo che in una partita ci siano 15 tiri liberi, calcolare: \\
+\begin{itemize}
+\item La probabilit\'a che il giocatore metta a segno tutti i tiri liberi
+\item La probabilit\'a che il giocatore metta a segno 14 tiri liberi
+\end{itemize}
+}
+
+\subsection*{Soluzione}
+Il problema si presta ad essere risolto utilizzando la probabilit\'a definita secondo Bernoulli, attraverso l'utilizzo dei coefficienti binomiali $\binom{n}{k}$ dove \texttt{n} \'e il numero di tentativi e \texttt{k} il numero di successi desiderati. La formula completa da utilizzare \'e: $\binom{n}{k}p^{k}q^{n-k}$.\\
+Definiamo:
+$$
+n = 15
+k_1 = 15
+k_2 = 14
+p = 0.7
+q = 1-p = 0.3
+$$
+Dove $k_1$ \'e il numero di successi desiderati al primo punto del problema, mentre $k_2$ \'e il numero di successi desiderati al secondo punto del problema. Sostituendo i valori per risolvere il primo punto otteniamo:
+
+%----------------------------------------------------------------------------------------
 \end{document}
