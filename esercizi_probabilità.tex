@@ -305,8 +305,15 @@ P(ITA | BIANCHI) &= 5.78 \cdot 10^{-4}
 \end{align}
 \item Il quarto punto lo risolviamo con la relazione tra probabilit\'a condizionata e congiunta
 \begin{align}
-P(ROSSI | NON\; ITA) &= \frac{P(ROSSI NON\; ITA)}{P(NON\; ITA)}\\ &=\frac{\frac{1}{160} \cdot 0.5 \cdot 6 \cdot 10^9 - 34685\to (Rossi\; nel\; mondo\; -\; Rossi\; in\; Italia)}{\frac{6 \cdot 10^9 - 55 \cdot 10^6}{6 \cdot 10^9}} \\
+P(ROSSI | NON\; ITA) &= \frac{P(ROSSI NON\; ITA)}{P(NON\; ITA)}\\ &=\frac{0.005 \cdot 6 \cdot 10^9 - 34685\to (Rossi\; nel\; mondo\; -\; Rossi\; in\; Italia)}{\frac{6 \cdot 10^9 - 55 \cdot 10^6}{6 \cdot 10^9}} \\
 &= 0.5030\%
+\end{align}
+\item Il quinto punto si risolve utilizzando al probabilit\'a complementare
+\begin{align}
+P(NON\; ITA | NON\; ROSSI) &= \frac{P(NON\; ROSSI | NON\; ITA) \cdot P(NON \; ITA)}{P(NON\; ROSSI)}\\
+&= \frac{P(NON\; ITA)}{P(NON\; ROSSI)} \cdot [P(1 - P(ROSSI | NON\; ITA))]\\
+&= \frac{\frac{6 \cdot 10^9 - 55 \cdot 10^6}{6 \cdot 10^9}}{1-0.005} \cdot [1 - 0.005030]\\
+&= 99.08\%
 \end{align}
 \end{enumerate}
 %----------------------------------------------------------------------------------------
