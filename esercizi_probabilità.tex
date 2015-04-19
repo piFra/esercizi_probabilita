@@ -290,10 +290,18 @@ Il primo punto del problema pu\'o essere risolto tramite la definizione di proba
 $$
 P(ITA\; E\; NON\; BIANCHI) = \frac{55 \cdot 10^6 - 34685}{6 \cdot 10^9} = 0.0091 = 0.91\%
 $$
-Il secondo punto lo impostiamo come:
+\item Il secondo punto lo impostiamo come:
 \begin{align}
 P(ITA\; E\; ROSSI\; O\; BIANCHI) = P(ITA\; E\; ROSSI) + P(ITA\; E\; BIANCHI)\\
 = \frac{82882}{6 \cdot 10^9} + \frac{34685}{6 \cdot 10^9} = 0.000015 = 0.0015\%
+\end{align}
+\item Il terzo punto si risolve con la probabilit\'a condizionata:
+\begin{align}
+P(ITA | BIANCHI) &= \frac{P(BIANCHI | ITA) \cdot P(ITA)}{P(BIANCHI)} \to\\
+P(BIANCHI | ITA) &= \frac{34685}{55 \cdot 10^6}\\
+P(ITA) &= \frac{55 \cdot 10^6}{6 \cdot 10^9}\\
+P(BIANCHI) &= 1\% = 0.01\\
+P(ITA | BIANCHI) = 5.78 \cdot 10^{-4}
 \end{align}
 
 \end{enumerate}
